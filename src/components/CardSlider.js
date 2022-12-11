@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, StatusBar, TextInput, FlatList, Image, ScrollView, TouchableOpacity } from 'react-native'
 import {colors,nonveg} from "../global/Style"
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import hassan from "../../assets/hassan.jpg";
 const CardSlider = ({title,data}) => {
@@ -25,9 +24,6 @@ const CardSlider = ({title,data}) => {
                  </View>
              </View>
              <View style={styles.s3}>
-                 <Text style={styles.buybtn}>
-                     Buy
-                 </Text>
              </View>
          </View>
      </TouchableOpacity>

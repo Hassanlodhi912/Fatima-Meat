@@ -3,7 +3,7 @@ import{View ,Text,StyleSheet,TextInput,ScrollView} from "react-native"
 import Categories from '../components/Categories'
 import HomeHeadNav from '../components/HomeHeadNav'
 import { AntDesign } from '@expo/vector-icons';
-import { colors, veg, nonveg } from '../global/Style';
+import { colors, } from '../global/Style';
 import OfferSlider from '../components/OfferSlider'
 import BottomNav from '../components/BottomNav';
 import Cardslider from '../components/CardSlider'
