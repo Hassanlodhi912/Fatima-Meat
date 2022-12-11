@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar'
-import React from 'react'
-import{View ,Text,StyleSheet,TextInput} from "react-native"
+import React, { useEffect, useState } from 'react'
+import{View ,Text,StyleSheet,TextInput,ScrollView} from "react-native"
 import Categories from '../components/Categories'
 import HomeHeadNav from '../components/HomeHeadNav'
 import { AntDesign } from '@expo/vector-icons';
 import { colors, veg, nonveg } from '../global/Style';
 import OfferSlider from '../components/OfferSlider'
+import BottomNav from '../components/BottomNav';
+import Cardslider from '../components/CardSlider'
+import { StatusBar } from 'expo-status-bar';
 
 const HomeScreen = () => {
-
+    const [MuttonData, setMuttonData] = useState(["Mutton Whole Carcass","Mutton Leg","Mutton Mince","Mutton Shoulder"]);
   return (
     <View style={styles.container}>
         {/* <StatusBar/> */}
         <HomeHeadNav/>
-        {/* <View style={styles.bottomnav}>
-                <BottomNav navigation={navigation} />
-            </View> */}
+        <View style={styles.bottomnav}>
+                <BottomNav  />
+            </View>
+            <ScrollView>
             <View style={styles.searchbox}>
                 <AntDesign name='search1' size={24} color="black" style={styles.searchicon}/>
 
@@ -23,6 +26,8 @@ const HomeScreen = () => {
             </View>
         <Categories/>
         <OfferSlider/>
+        <Cardslider title={"Mutton "} data={MuttonData}  />
+    </ScrollView>
     </View>
   )
 }

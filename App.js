@@ -7,8 +7,8 @@ import Welcome from './src/pages/Welcome';
 // import RootNavigation from './src/RootNavigation';
 export default function App() {
   return( 
-    <HomeScreen/>
     // <Welcome/>
+    <HomeScreen/>
     // <SignUpScreen/>
     // <LoginScreen/>
     )
