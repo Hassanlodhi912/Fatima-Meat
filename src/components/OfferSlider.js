@@ -1,18 +1,27 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
-import Swiper from 'react-native-swiper/src/index';
+import Swiper from 'react-native-swiper';
 import { colors } from '../global/Style';
-
-
-
+import home1 from "../../assets/offerSliderImages/home1.png"
 const OfferSlider = () => {
     return (
         <View>
             <View style={styles.offerSlider}>
-                <Swiper 
+            <Swiper autoplay={true} autoplayTimeout={5} showsButtons={true}
+                    dotColor={colors.text2} activeDotColor={colors.text1}
+                    nextButton={<Text style={styles.buttonText}>›</Text>}
+                    prevButton={<Text style={styles.buttonText}>‹</Text>}
                 >
                     <View style={styles.slide}>
-                        <Image source={require('../../assets/OfferSliderImages/home2.png')} style={styles.image} />
+                        <Image source={home1} style={styles.image} />
+                    </View>
+                    <View style={styles.slide}>
+                        <Image source={home1} style={styles.image} />
+                    </View>
+                    <View style={styles.slide}>
+                        <Image source={home1} style={styles.image} />
+                    </View>
+                    <View style={styles.slide}>
+                        <Image source={home1} style={styles.image} />
                     </View>
                    
                     

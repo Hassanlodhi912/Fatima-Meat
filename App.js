@@ -8,12 +8,12 @@ import Welcome from './src/pages/Welcome';
 export default function App() {
   return( 
     <HomeScreen/>
+    // <Welcome/>
     // <SignUpScreen/>
     // <LoginScreen/>
-    // <Welcome/>
-  )
-}
-
+    )
+  }
+  
 const styles = StyleSheet.create({
  container:{
   flex:1,
