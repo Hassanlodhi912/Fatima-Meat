@@ -2,7 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import welcome1 from "../../assets/welcome1.png"
 import { colors, hr80 } from '../../src/global/Style';
-const Welcome = () => {
+import LoginScreen from './LoginScreen';
+const Welcome = ({navigation}) => {
 
     return (
         
@@ -24,7 +25,7 @@ const Welcome = () => {
                     </Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
-                        <Text style={styles.btn}>
+                        <Text style={styles.btn} onPress={()=>navigation.navigate("Signin")}>
                             Log In
                         </Text>
                 </TouchableOpacity>
