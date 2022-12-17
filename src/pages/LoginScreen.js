@@ -5,10 +5,9 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import {Signup} from "./SignUpScreen";
 
-
-
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     const [emailfocus, setEmailfocus] = useState(false);
     const [passwordfocus, setPasswordfocus] = useState(false);
     const [showpassword, setShowpassword] = useState(false);
@@ -17,9 +16,6 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('');
     const [customerror, setcustomError] = useState('');
     const [text, setText] = React.useState("");
-
-
-
     return (
         <View style={styles.container}>
             <Text style={styles.head1}>Sign In</Text>
@@ -43,7 +39,7 @@ const LoginScreen = () => {
                     onChangeText={(text) => setPassword(text)} />
             <Octicons name={showpassword == false ? "eye-closed" : "eye"} size={24} color="black" onPress={() => setShowpassword(!showpassword)} />
             </View>
-            <TouchableOpacity style={btn1} onPress={() => handlelogin()}>
+            <TouchableOpacity style={btn1} onPress={() => navigation.navigate('Home')}>
                 <Text style={{ color: colors.col1, fontSize: titles.btntxt, fontWeight: "bold" }}>Sign in</Text>
             </TouchableOpacity>
             <Text style={styles.forgot}>Forgot Password?</Text>
@@ -63,7 +59,7 @@ const LoginScreen = () => {
             </View>
             <View style={hr80}></View>
             <Text >Already have an account?
-                <Text style={styles.signup} onPress={() => navigation.navigate('signup')}> Sign In</Text>
+                <Text style={styles.signup} onPress={() => navigation.navigate('Signup')}> Sign In</Text>
             </Text>
         </View>
     )

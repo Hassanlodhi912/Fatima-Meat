@@ -13,7 +13,6 @@ const HomeScreen = () => {
     const [MuttonData, setMuttonData] = useState(["Mutton Whole Carcass","Mutton Leg","Mutton Mince","Mutton Shoulder"]);
   return (
     <View style={styles.container}>
-        {/* <StatusBar/> */}
         <HomeHeadNav/>
         <View style={styles.bottomnav}>
                 <BottomNav  />
@@ -35,12 +34,13 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {
-        // marginTop: 50,
+        marginTop: StatusBar.currentHeight,
         flex: 1,
         backgroundColor: colors.col1,
-        // alignItems: 'center',
+        alignItems: 'center',
         width: '100%',
         height: '100%',
+
     },
     searchbox: {
         flexDirection: 'row',

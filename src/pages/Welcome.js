@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import welcome1 from "../../assets/welcome1.png"
 import { colors, hr80 } from '../../src/global/Style';
-import LoginScreen from './LoginScreen';
 const Welcome = ({navigation}) => {
 
     return (
@@ -20,13 +19,13 @@ const Welcome = ({navigation}) => {
             <View style={hr80} />
             <View style={styles.btnout}>
                 <TouchableOpacity  >
-                    <Text style={styles.btn}>
+                    <Text style={styles.btn} onPress={()=>navigation.navigate("Signup")}>
                         Sign up
                     </Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
                         <Text style={styles.btn} onPress={()=>navigation.navigate("Signin")}>
-                            Log In
+                            Sign In
                         </Text>
                 </TouchableOpacity>
 
