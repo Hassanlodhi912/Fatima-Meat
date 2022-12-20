@@ -1,10 +1,14 @@
-import {StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import AuthStack from "./src/config/AuthStack";
-import AppStack from "./src/config/AppStack"
+import AppStack from './src/config/AppStack';
 export default function App() {
   return (
-      // <AppStack/>
-      <AuthStack/>
+    <NavigationContainer>
+      <AuthStack />
+      {/* <AppStack/> */}
+    </NavigationContainer>
   )
 }
 

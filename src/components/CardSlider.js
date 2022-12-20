@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, StatusBar, TextInput, FlatList, Image, ScrollVi
 import {colors,nonveg} from "../global/Style"
 import { MaterialIcons } from '@expo/vector-icons';
 import hassan from "../../assets/hassan.jpg";
-const CardSlider = ({title,data}) => {
+const CardSlider = ({title,data,navigation}) => {
   return (
     
     <View style={styles.container}>
@@ -11,14 +11,14 @@ const CardSlider = ({title,data}) => {
         <MaterialIcons name="goat" size={32} color="red" style={styles.myicon} />
     </Text>
     
-        <TouchableOpacity 
+        <TouchableOpacity onPress={()=>navigation.navigate("Detail")}
         >
-         <View style={styles.card}>
-             <View style={styles.s1}>
+         <View style={styles.card} >
+             <View style={styles.s1} >
                 <Image source={hassan} style={styles.cardimgin}/>
              </View>
              <View style={styles.s2}>
-                 <Text style={styles.txt1}>{data[0]}</Text>
+                 <Text style={styles.txt1}>hassan</Text>
                  <View style={styles.s2in}>
                      <Text style={styles.txt2}>Rs.2000/-</Text>
                  </View>

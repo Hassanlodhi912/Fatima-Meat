@@ -9,10 +9,11 @@ import BottomNav from '../components/BottomNav';
 import Cardslider from '../components/CardSlider'
 import { StatusBar } from 'expo-status-bar';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     const [MuttonData, setMuttonData] = useState(["Mutton Whole Carcass","Mutton Leg","Mutton Mince","Mutton Shoulder"]);
   return (
     <View style={styles.container}>
+        {/* <StatusBar/> */}
         <HomeHeadNav/>
         <View style={styles.bottomnav}>
                 <BottomNav  />
@@ -25,7 +26,7 @@ const HomeScreen = () => {
             </View>
         <Categories/>
         <OfferSlider/>
-        <Cardslider title={"Mutton "} data={MuttonData}  />
+        <Cardslider title={"Mutton "} data={MuttonData} navigation={navigation}  />
     </ScrollView>
     </View>
   )
