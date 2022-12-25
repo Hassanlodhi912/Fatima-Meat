@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import welcome1 from "../../assets/welcome1.png"
+import { StyleSheet, Text, View, Image, TouchableOpacity,} from 'react-native'
+import welcomeImg from "../../assets/welcome1.png"
 import { colors, hr80 } from '../../src/global/Style';
 const Welcome = ({navigation}) => {
 
@@ -8,13 +8,13 @@ const Welcome = ({navigation}) => {
         
         <View style={styles.container}>
             <Text style={styles.title}>
-                Welcome to  Fatima  Meat
+                Welcome to Shop By Voice
             </Text>
             <View style={styles.logoout}>
-                <Image source={welcome1} style={styles.logo}/>
+                <Image source={welcomeImg} style={styles.logo}/>
             </View>
             <Text style={styles.text}>
-                High Quality Meat And Affordable Price
+                The State of Voice Shopping
             </Text>
             <View style={hr80} />
             <View style={styles.btnout}>
@@ -37,7 +37,7 @@ const Welcome = ({navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#ff4242',
+        backgroundColor:"#FCE700",
         width: '100%',
         height:"100%",
         alignItems: 'center',
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
     title: {
         fontSize: 50,
-        color: colors.col1,
+        color: colors.col2,
         textAlign: 'center',
         marginVertical: 100,
         fontWeight: '200',
@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
     },
     
     text: {
-        fontSize: 18,
+        fontSize: 16,
         width: '80%',
-        color: colors.col1,
+        color: colors.col2,
         textAlign: 'center',
     },
     btnout: {
